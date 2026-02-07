@@ -15,16 +15,9 @@ public class HamburguesaPersonalizada {
         this.salsas = salsas;
     }
 
-    public void mostrarIngredientes() {
-        System.out.println("Hamburguesa Personalizada:");
-        System.out.println("Pan: " + pan);
-        System.out.println("Carne: " + carne);
-        System.out.println("Queso: " + queso);
-        System.out.println("Vegetales: " + vegetales);
-        System.out.println("Salsas: " + salsas);
-    }
+    
     public static void main(String[] args) {
-        HamburguesaPersonalizada miHamburguesa = new HamburguesaPersonalizada("Pan de Ajo", "Carne de Res", "Queso Cheddar", "Lechuga, Tomate, Cebolla", "Salsa BBQ");
-        miHamburguesa.mostrarIngredientes();
+        HamburguesaPersonalizada miHamburguesa = new HamburguesaPersonalizada("Pan de Ajo", "Carne de Res", "Queso Cheddar", "Lechuga, Tomate, Cebolla", "Mayonesa, Ketchup");
     }
+
 }
