@@ -12,6 +12,11 @@ public class Cart {
 
     public boolean isEmpty() {return items.isEmpty(); }
 
+    public List<CartItem> getItems() { return this.items; }
+
+    public void clear() {items.clear(); }
+
+
     public void addProduct(Product productToAdd, int quantity) {
         boolean found = false;
 
@@ -51,7 +56,19 @@ public class Cart {
             System.out.println("The item you want to remove does not exist.");
         }
     }
+    
 
+    public double calculateSubtotal () {
+
+        double subtotal = items.stream()
+        // Quantity of the product * price of the product 
+        .map(item -> item.getProduct().getPrice() * item.getAmount())
+        // Line provided by ChatGPT - used to sum all of the elements 
+        .reduce(0.0, Double::sum);
+
+        return subtotal; 
+    }
 }
+
 
 
