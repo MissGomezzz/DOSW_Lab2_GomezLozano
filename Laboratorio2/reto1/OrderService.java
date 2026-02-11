@@ -2,7 +2,7 @@ package Laboratorio2.reto1;
 
 public class OrderService {
 
-    private DiscountStrategy discountStrategy;
+    private final DiscountStrategy discountStrategy;
 
     public OrderService (DiscountStrategy discountStrategy) {
         this.discountStrategy = discountStrategy;
@@ -13,4 +13,7 @@ public class OrderService {
         return subtotal - discountStrategy.calculateDiscount(subtotal);
     }
 }
+
+
+
 

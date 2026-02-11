@@ -5,13 +5,16 @@ public class DiscountStrategyFactory {
     public static DiscountStrategy getStrategy(String clientType) {
         clientType = clientType.toLowerCase();
         switch (clientType) {
-            case "new":
+            case "new" -> {
                 return new NewClientDiscount();
-            case "frequent":
+            }
+            case "frequent" -> {
                 return new FrequentClientDiscount();
-            default:
-                throw new  IllegalArgumentException ("Error. Invalid type of client.");
+            }
+            default -> throw new  IllegalArgumentException ("Error. Invalid type of client.");
         }   
     }
 }
+
+
 
