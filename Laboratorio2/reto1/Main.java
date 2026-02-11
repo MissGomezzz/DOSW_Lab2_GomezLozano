@@ -32,7 +32,7 @@ public class Main {
 
         Cart cart = new Cart();
 
-        Client currentClient = new Client ("frequent");
+        Client currentClient = new Client ("new");
 
         // Applying the pattern 
         DiscountStrategy strategy = DiscountStrategyFactory.getStrategy(currentClient.getTypeOfClient());   

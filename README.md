@@ -1,6 +1,6 @@
 # Laboratorio 2 - Identificando los patrones de diseño 
 
-## RETO 1 - El problema de la tienda de Don Pepe – Patrón creacional
+## RETO 1 - El problema de la tienda de Don Pepe – Patrón comportamental 
 
 **Diagrama de clases**
 
