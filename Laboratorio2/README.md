@@ -1,4 +1,5 @@
 # Laboratorio 2 - Identificando los patrones de diseño 
+**Autoras: Paula Valentina Lozano, Ángela Gómez**
 
 ## RETO 1 - El problema de la tienda de Don Pepe – Patrón comportamental 
 
@@ -8,9 +9,10 @@ Diagrama de clases realizado en Mermaid:
 
 ![alt text](<images/DonPepe.png>)
 
+Nota: El diagrama fue apoyado del código UML brindado por ChatGPT. 
+
 
 **Descripción**
-
 
 Consideramos que para este problema podría ser óptimo el uso del patrón de Strategy, ya que en esta situación se requiere implementar tipos de clientes; acá podríamos implementar interfaces para facilitar el manejo de los productos de la tienda de Pepe, en donde cambiamos el algoritmo durante el tiempo de ejecución. 
 
@@ -54,10 +56,7 @@ Un ejemplo de entrada y salida es el siguiente.
 
 ### Ejemplo: 
 
-
-
 ![alt text](images/results.png)
-
 
 
 ## RETO 2 - El chef de 5 estrellas – Patrón creacional 
