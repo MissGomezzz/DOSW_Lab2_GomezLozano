@@ -63,9 +63,45 @@ Un ejemplo de entrada y salida es el siguiente.
 
 
 **Diagrama de clases**
+![Diagrama UML](images/DiagramaReto2.png)
 
 **Descripción**
 Para este problema identificamos que el mejor patrón de diseño para manejar la creación de hamburguesas es el Builder: esto se debe a que, por el contexto de la creación de las hamburguesas, este patrón nos ofrece un rango de posibles opciones para los pedidos de los usuarios – es decir, con este patrón logramos resultados personalizados. 
 
+**Patrón de Diseño**
 
+Creacional
+
+**Patrón Utilizado**
+
+Builder
+
+**Justificación**
+
+Para este problema identificamos que el patrón más adecuado para manejar la creación de hamburguesas personalizadas es el Builder, ya que el reto exige construir objetos complejos paso a paso, permitiendo que algunos ingredientes sean opcionales.
+
+Cada hamburguesa puede tener pan, carne, queso, vegetales y salsas, pero no todos los ingredientes son obligatorios ni siempre se combinan de la misma manera. Si hubiéramos utilizado un constructor tradicional con muchos parámetros, el código habría sido difícil de leer, mantener y extender. Además, se habría vuelto poco claro cuáles ingredientes son obligatorios y cuáles opcionales.
+
+El patrón Builder nos permitió separar el proceso de construcción del objeto final, dando flexibilidad para que el usuario elija únicamente los ingredientes que desea, sin afectar la coherencia del objeto resultante.
+
+**Aplicación**
+![Diagrama UML](images/Builder.png)
+
+Implementamos la clase HamburguesaPersonalizada, la cual contiene los atributos correspondientes a los ingredientes seleccionados. Dentro de esta clase definimos un Builder interno que permite agregar ingredientes de manera progresiva mediante métodos encadenados.
+
+Cada método del builder agrega un ingrediente específico y retorna la misma instancia del builder, lo que permite una construcción fluida hasta que finalmente se llama al método build(), que genera la hamburguesa completa.
+
+De esta forma:
+
+ - El usuario selecciona los ingredientes.
+
+ - El builder construye el objeto paso a paso.
+
+ - La hamburguesa final queda completamente configurada antes de utilizarse.
+
+El cálculo del precio total se realizó utilizando streams, sumando dinámicamente el valor de los ingredientes seleccionados. Esto nos permitió mantener el código limpio y funcional.
+
+El desarrollo se realizó en equipo, distribuyendo responsabilidades entre los integrantes para garantizar que todos participáramos activamente en la implementación. Para reforzar la comprensión del patrón Builder nos apoyamos en material visto en clase y algunos recursos adicionales como videos explicativos.
+
+La estructuración del flujo principal y la organización del método main se apoyó parcialmente con herramientas de IA para mantener claridad y evitar que se volviera demasiado extenso, siempre revisando y comprendiendo el código antes de integrarlo.
 
